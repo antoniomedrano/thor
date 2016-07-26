@@ -78,6 +78,7 @@ const std::shared_ptr<GriddedData<PointLL> > Isochrone::Compute(PathLocation& or
     max_distance = max_time_seconds * 20.0f * 0.44704;
     nt = 512;
   }
+  //TODO: where is transit should it be disallowed?
   PointLL center = origin.latlng_;
   float delta = max_distance / kMetersPerDegreeLat;
   AABB2<PointLL> bounds(PointLL(center.lng() - delta, center.lat() - delta),
