@@ -102,17 +102,18 @@ namespace valhalla {
               valhalla::midgard::logging::Log("matrix_type::" + *matrix_type, " [ANALYTICS] ");
               return optimized_path(correlated, costing, request_str, info.do_not_track);
           }
-        }
-        //isolines
-        if(request.get_optional<bool>("isolines")) {
+        }//isolines
+        else if(request.get_optional<bool>("isolines")) {
+
           //TODO: need a member of the isochrone object type
           //call it
           //use midgard to contour it
           //use midgard to geojson it
           //return it back
-        }//regular route
-        else
-          return trip_path(costing, request_str, date_time_type, info.do_not_track);
+        }
+
+        //regular route
+        return trip_path(costing, request_str, date_time_type, info.do_not_track);
       }
       catch(const std::exception& e) {
         worker_t::result_t result{false};

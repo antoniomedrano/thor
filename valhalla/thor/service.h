@@ -21,6 +21,7 @@
 #include <valhalla/sif/costfactory.h>
 #include <valhalla/thor/bidirectional_astar.h>
 #include <valhalla/thor/trippathbuilder.h>
+#include <valhalla/thor/isochrone.h>
 
 
 namespace valhalla {
@@ -59,6 +60,7 @@ namespace valhalla {
       PathAlgorithm astar;
       BidirectionalAStar bidir_astar;
       MultiModalPathAlgorithm multi_modal_astar;
+      Isochrone isochrone;
       float long_request_route;
       float long_request_manytomany;
       boost::optional<int> date_time_type;
