@@ -61,8 +61,7 @@ namespace valhalla {
       BidirectionalAStar bidir_astar;
       MultiModalPathAlgorithm multi_modal_astar;
       Isochrone isochrone;
-      float long_request_route;
-      float long_request_manytomany;
+      float long_request;
       boost::optional<int> date_time_type;
     };
   }
