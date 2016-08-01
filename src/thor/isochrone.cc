@@ -47,7 +47,7 @@ void Isochrone::Clear() {
 }
 
 // Compute an isochrone.
-const std::shared_ptr<GriddedData<PointLL> > Isochrone::Compute(
+std::shared_ptr<const GriddedData<PointLL> > Isochrone::Compute(
              std::vector<PathLocation>& origin_locations,
              const uint32_t max_seconds,
              GraphReader& graphreader,

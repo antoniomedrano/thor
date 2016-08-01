@@ -53,7 +53,7 @@ class Isochrone {
    * @param  mode_costing List of costing objects
    * @param  mode         Travel mode
    */
-  const std::shared_ptr<GriddedData<midgard::PointLL> > Compute(
+  std::shared_ptr<const GriddedData<midgard::PointLL> > Compute(
           std::vector<baldr::PathLocation>& origin_locs,
           const uint32_t max_seconds,
           baldr::GraphReader& graphreader,
